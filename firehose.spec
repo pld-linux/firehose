@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/heroines/%{name}-%{version}-src.tar.bz2
+# Source0-md5:	bdac7f90ae27bb89f1a23f110187707b
 URL:		http://heroines.sourceforge.net/firehose.php3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
