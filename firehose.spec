@@ -50,15 +50,12 @@ install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir},%{_bindir}}
 install firerecv firesend firepipe $RPM_BUILD_ROOT%{_bindir}
 install libfirehose.a $RPM_BUILD_ROOT%{_libdir}
 install firehose*.h $RPM_BUILD_ROOT%{_includedir}
-
-gzip -9nf README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README
 %attr(755,root,root) %{_bindir}/*
 
 %files devel
