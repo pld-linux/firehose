@@ -1,12 +1,12 @@
 Summary:	Easy data transfer over parallel network devices
 Summary(pl):	Narzêdzie do ³atwego przesy³ania danych po równoleg³ych urz±dzeniach sieciowych
 Name:		firehose
-Version:	0.5.0
+Version:	0.6.0
 Release:	1
 License:	LGPL
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/heroines/%{name}-%{version}-src.tar.bz2
-# Source0-md5:	bdac7f90ae27bb89f1a23f110187707b
+# Source0-md5:	04b846adb6f90df2756d297ab02cce21
 URL:		http://heroines.sourceforge.net/firehose.php3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,7 +37,7 @@ Firehose header files and static library.
 Pliki nag³ówkowe i statyczna biblioteka firehose.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %{__make} \
