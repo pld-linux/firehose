@@ -1,11 +1,11 @@
 Summary:	Easy data transfer over parallel network devices
 Summary(pl):	Narzêdzie do ³atwego przesy³ania danych po równoleg³ych urz±dzeniach sieciowych
 Name:		firehose
-Version:	0.4.0
+Version:	0.5.0
 Release:	1
 License:	LGPL
 Group:		Networking/Utilities
-Source0:	http://heroines.sourceforge.net/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/heroines/%{name}-%{version}-src.tar.bz2
 URL:		http://heroines.sourceforge.net/firehose.php3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,15 +41,17 @@ Pliki nag³ówkowe i statyczna biblioteka firehose.
 %build
 %{__make} \
 	GCC="%{__cc}" \
-	CFLAGS="%{rpmcflags}"
+	CFLAGS="%{rpmcflags}" \
+	TARGET=pld
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir},%{_bindir}}
 
-install firerecv firesend firepipe $RPM_BUILD_ROOT%{_bindir}
-install libfirehose.a $RPM_BUILD_ROOT%{_libdir}
+install pld/{firerecv,firesend,firepipe,dateserve,dateget,bottom,extract} $RPM_BUILD_ROOT%{_bindir}
+install pld/libfirehose.a $RPM_BUILD_ROOT%{_libdir}
 install firehose*.h $RPM_BUILD_ROOT%{_includedir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
