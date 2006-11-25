@@ -1,0 +1,12 @@
+diff -urN firehose-0.6.0.org/Makefile firehose-0.6.0/Makefile
+--- firehose-0.6.0.org/Makefile	2003-08-09 08:44:39.000000000 +0200
++++ firehose-0.6.0/Makefile	2006-11-26 00:25:05.905128750 +0100
+@@ -42,7 +42,7 @@
+ 
+ 
+ 
+-$(shell sh -c 'if ! test -d $(TARGET)\; then mkdir $(TARGET)\; fi' )
++$(shell install -d $(TARGET) )
+ $(shell echo $(CFLAGS) > $(TARGET)/cflags )
+ 
+ 
