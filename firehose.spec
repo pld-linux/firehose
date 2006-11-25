@@ -7,6 +7,7 @@ License:	LGPL
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/heroines/%{name}-%{version}-src.tar.bz2
 # Source0-md5:	04b846adb6f90df2756d297ab02cce21
+Patch0:		%{name}-sh.patch
 URL:		http://heroines.sourceforge.net/firehose.php3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,6 +39,7 @@ Pliki nag³ówkowe i statyczna biblioteka firehose.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
