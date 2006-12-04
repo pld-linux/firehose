@@ -29,7 +29,7 @@ pozwala na wysy³anie danych przy u¿yciu rurek.
 Summary:	Firehose header files and static library
 Summary(pl):	Pliki nag³ówkowe i statyczna biblioteka firehose
 Group:		Development/Libraries
-# doesn not depend on base (no shared library)
+# does not depend on base (no shared library)
 
 %description devel
 Firehose header files and static library.
