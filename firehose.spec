@@ -1,5 +1,5 @@
 Summary:	Easy data transfer over parallel network devices
-Summary(pl.UTF-8):   Narzędzie do łatwego przesyłania danych po równoległych urządzeniach sieciowych
+Summary(pl.UTF-8):	Narzędzie do łatwego przesyłania danych po równoległych urządzeniach sieciowych
 Name:		firehose
 Version:	0.6.0
 Release:	1
@@ -27,7 +27,7 @@ pozwala na wysyłanie danych przy użyciu rurek.
 
 %package devel
 Summary:	Firehose header files and static library
-Summary(pl.UTF-8):   Pliki nagłówkowe i statyczna biblioteka firehose
+Summary(pl.UTF-8):	Pliki nagłówkowe i statyczna biblioteka firehose
 Group:		Development/Libraries
 # does not depend on base (no shared library)
 
