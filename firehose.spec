@@ -1,5 +1,5 @@
 Summary:	Easy data transfer over parallel network devices
-Summary(pl):	Narzêdzie do ³atwego przesy³ania danych po równoleg³ych urz±dzeniach sieciowych
+Summary(pl.UTF-8):   NarzÄ™dzie do Å‚atwego przesyÅ‚ania danych po rÃ³wnolegÅ‚ych urzÄ…dzeniach sieciowych
 Name:		firehose
 Version:	0.6.0
 Release:	1
@@ -18,24 +18,24 @@ utilities which demonstrate use of the library. firerecv is a threaded
 server and firesend is a client. firepipe allows you to send data over
 parallel network devices using pipes.
 
-%description -l pl
-Podstaw± firehose jest biblioteka pozwalaj±ca programom przesy³aæ
-strumienie danych po wielu równoleg³ych po³±czeniach sieciowych naraz.
-Pakiet zawiera kilka narzêdzi demonstruj±cych u¿ycie tej biblioteki:
-firerecv to wielow±tkowy serwer, firesend to klient, a firepipe
-pozwala na wysy³anie danych przy u¿yciu rurek.
+%description -l pl.UTF-8
+PodstawÄ… firehose jest biblioteka pozwalajÄ…ca programom przesyÅ‚aÄ‡
+strumienie danych po wielu rÃ³wnolegÅ‚ych poÅ‚Ä…czeniach sieciowych naraz.
+Pakiet zawiera kilka narzÄ™dzi demonstrujÄ…cych uÅ¼ycie tej biblioteki:
+firerecv to wielowÄ…tkowy serwer, firesend to klient, a firepipe
+pozwala na wysyÅ‚anie danych przy uÅ¼yciu rurek.
 
 %package devel
 Summary:	Firehose header files and static library
-Summary(pl):	Pliki nag³ówkowe i statyczna biblioteka firehose
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i statyczna biblioteka firehose
 Group:		Development/Libraries
 # does not depend on base (no shared library)
 
 %description devel
 Firehose header files and static library.
 
-%description devel -l pl
-Pliki nag³ówkowe i statyczna biblioteka firehose.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe i statyczna biblioteka firehose.
 
 %prep
 %setup -q
