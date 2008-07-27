@@ -2,7 +2,7 @@ Summary:	Easy data transfer over parallel network devices
 Summary(pl.UTF-8):	Narzędzie do łatwego przesyłania danych po równoległych urządzeniach sieciowych
 Name:		firehose
 Version:	0.6.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/heroines/%{name}-%{version}-src.tar.bz2
