@@ -1,0 +1,8 @@
+--- firehose-0.6.0/swapon.c~	2003-02-03 17:05:29.000000000 +0100
++++ firehose-0.6.0/swapon.c	2014-01-28 21:45:40.834925396 +0100
+@@ -1,5 +1,4 @@
+ #include <unistd.h>
+-#include <asm/page.h>
+ #include <sys/swap.h>
+ 
+ 
