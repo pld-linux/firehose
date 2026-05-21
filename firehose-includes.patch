@@ -1,0 +1,113 @@
+diff -urN firehose-0.6.0.orig/bottom.c firehose-0.6.0/bottom.c
+--- firehose-0.6.0.orig/bottom.c	2003-02-03 17:05:29.000000000 +0100
++++ firehose-0.6.0/bottom.c	2026-05-21 01:31:12.092885685 +0200
+@@ -1,8 +1,10 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <stdint.h>
++#include <string.h>
+ #include <time.h>
+ #include <unistd.h>
++#include <sys/time.h>
+ 
+ typedef struct 
+ {
+diff -urN firehose-0.6.0.orig/dateget.c firehose-0.6.0/dateget.c
+--- firehose-0.6.0.orig/dateget.c	2003-02-03 17:05:29.000000000 +0100
++++ firehose-0.6.0/dateget.c	2026-05-21 01:29:52.516219018 +0200
+@@ -4,7 +4,9 @@
+ #include <stdint.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <unistd.h>
+ #include <sys/socket.h>
++#include <sys/time.h>
+ #include <sys/types.h>
+ #include <time.h>
+ 
+diff -urN firehose-0.6.0.orig/dateserve.c firehose-0.6.0/dateserve.c
+--- firehose-0.6.0.orig/dateserve.c	2003-02-03 17:05:29.000000000 +0100
++++ firehose-0.6.0/dateserve.c	2026-05-21 01:29:53.466219018 +0200
+@@ -3,6 +3,7 @@
+ #include <stdio.h>
+ #include <stdint.h>
+ #include <stdlib.h>
++#include <unistd.h>
+ #include <sys/socket.h>
+ #include <sys/time.h>
+ #include <sys/types.h>
+diff -urN firehose-0.6.0.orig/extract.c firehose-0.6.0/extract.c
+--- firehose-0.6.0.orig/extract.c	2003-02-03 17:05:29.000000000 +0100
++++ firehose-0.6.0/extract.c	2026-05-21 01:31:12.092885685 +0200
+@@ -1,3 +1,4 @@
++#define _LARGEFILE64_SOURCE
+ #include <stdint.h>
+ #include <stdio.h>
+ #include <string.h>
+diff -urN firehose-0.6.0.orig/firehose.c firehose-0.6.0/firehose.c
+--- firehose-0.6.0.orig/firehose.c	2003-07-26 04:16:54.000000000 +0200
++++ firehose-0.6.0/firehose.c	2026-05-21 01:29:50.356219018 +0200
+@@ -4,6 +4,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <unistd.h>
+ #include <sys/sem.h>
+ 
+ union semun {
+diff -urN firehose-0.6.0.orig/firepipe.c firehose-0.6.0/firepipe.c
+--- firehose-0.6.0.orig/firepipe.c	2003-02-03 17:05:29.000000000 +0100
++++ firehose-0.6.0/firepipe.c	2026-05-21 01:32:10.266219019 +0200
+@@ -1,6 +1,8 @@
+ #include "firehose.h"
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
++#include <unistd.h>
+ #include <sys/time.h>
+ 
+ #define BUFFER_SIZE 0x100000
+diff -urN firehose-0.6.0.orig/firerecv.c firehose-0.6.0/firerecv.c
+--- firehose-0.6.0.orig/firerecv.c	2003-07-25 11:18:14.000000000 +0200
++++ firehose-0.6.0/firerecv.c	2026-05-21 01:32:14.009552352 +0200
+@@ -1,6 +1,8 @@
+ #include "firehose.h"
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
++#include <unistd.h>
+ 
+ #define BUFFER_SIZE 0x100000
+ 
+diff -urN firehose-0.6.0.orig/firesend.c firehose-0.6.0/firesend.c
+--- firehose-0.6.0.orig/firesend.c	2003-02-03 17:05:29.000000000 +0100
++++ firehose-0.6.0/firesend.c	2026-05-21 01:32:12.042885686 +0200
+@@ -1,6 +1,8 @@
+ #include "firehose.h"
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
++#include <unistd.h>
+ #include <sys/time.h>
+ 
+ #define BUFFER_SIZE 0x100000
+diff -urN firehose-0.6.0.orig/swapon.c firehose-0.6.0/swapon.c
+--- firehose-0.6.0.orig/swapon.c	2003-02-03 17:05:29.000000000 +0100
++++ firehose-0.6.0/swapon.c	2026-05-21 01:31:21.359552352 +0200
+@@ -1,5 +1,6 @@
++#include <stdio.h>
++#include <stdlib.h>
+ #include <unistd.h>
+-#include <asm/page.h>
+ #include <sys/swap.h>
+ 
+ 
+@@ -17,7 +18,7 @@
+ 	{
+ 		perror("swapon");
+ 	}
+-	return ;
++	return 0;
+ }
+ 
+ 
